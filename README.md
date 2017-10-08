@@ -16,5 +16,6 @@ In order to generate a complex integer array to test how this array is flatten, 
 maxLenghArray: Max lengh of each integer array generated.
 maxIntValue:   Max integer value set when populating arrays.
 maxDeepLevel:  Max deep level where new arrays will be generated.
+maxIntValue:   Max integer value to set when populating array.
 
 You have public static methods  to set these properties.
