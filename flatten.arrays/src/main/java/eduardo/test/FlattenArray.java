@@ -53,6 +53,21 @@ public final class FlattenArray {
 	 * Private constructor to avoid class instantiation
 	 */
 	private FlattenArray() {};
+	
+	/**
+	 * Helper class for generating random complex integer arrays
+	 * @return A random complex integer array object
+	 */
+	public static Object[] populateObject() {
+		// Integer random generator
+		Random rdm = new Random((new Date()).getTime());
+		// Master array
+		Object[] objectArray = new Object[rdm.nextInt(maxLenghArray)+1];
+		populateObject(objectArray, rdm, 0);
+		
+		return objectArray;
+		
+	}
 
 	/**
 	 * Generates a random content for the object with other objects or integers
@@ -60,7 +75,7 @@ public final class FlattenArray {
 	 * @param rdm Random object to generate random integers
 	 * @param level Max deep level of new arrays
 	 */
-	public static void populateObject(final Object[] o, final Random rdm, int level) {
+	private static void populateObject(final Object[] o, final Random rdm, int level) {
 		
 		if(o == null) {
 			return;
@@ -151,5 +166,8 @@ public final class FlattenArray {
 		sb.delete(sb.length()-1, sb.length());
 		sb.append("]");
 		System.out.println(sb.toString());
+		
+		objectArray = populateObject();
+		System.out.println(printFlatArray(flatArray(objectArray)));
 	}
 }
