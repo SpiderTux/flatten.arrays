@@ -1,7 +1,7 @@
 # flatten.arrays
-Java tool for flatting complex integer arrays.
+Java tool for flattening complex integer arrays.
 
-Flatten arrays is a simple tool for flatting complex integer arrays.
+Flatten arrays is a simple tool for flattening complex integer arrays.
 
 Complex arrays are arrays that can store integers or well another integer arrays in an arbitrary way.
 
